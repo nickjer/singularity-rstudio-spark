@@ -1,12 +1,9 @@
 # Singularity Apache Spark w/ RStudio Server
 
-Singularity image for [Apache Spark] with the [sparklyr] package installed.
-This image has an [RStudio Server] base for launching an RStudio Server to
-connect with an Apache Spark cluster running in Standalone Mode.
-
-[Apache Spark]: https://spark.apache.org/
-[sparklyr]: http://spark.rstudio.com/
-[RStudio Server]: https://www.rstudio.com/products/rstudio/
+Singularity image for [Apache Spark] with the [sparklyr] package installed. It
+was built on top of the base Singularity image [nickjer/singularity-rstudio] in
+order to launch an [RStudio Server] to more easily connect with an Apache Spark
+cluster running in [Standalone Mode].
 
 This is still a work in progress.
 
@@ -34,8 +31,6 @@ You can launch Spark in [Standalone Mode] by first launching a "master" process
 which will print out a `spark://HOST:PORT` for itself, which you can then use
 to connect "workers" to it.
 
-[Standalone Mode]: https://spark.apache.org/docs/latest/spark-standalone.html
-
 ### Spark Master
 
 You can launch a "master" process as a Singularity app with:
@@ -52,6 +47,16 @@ You can launch a "worker" process as a Singularity app with:
 singularity run --app spark-worker singularity-rstudio-spark.simg
 ```
 
+### RStudio Server
+
+See [nickjer/singularity-rstudio] for more information on how to run `rserver`
+from within this Singularity image.
+
+### R and Rscript
+
+See [nickjer/singularity-r] for more information on how to run `R` and
+`Rscript` from within this Singularity image.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
@@ -61,4 +66,10 @@ https://github.com/nickjer/singularity-rstudio-spark.
 
 The code is available as open source under the terms of the [MIT License].
 
+[Apache Spark]: https://spark.apache.org/
+[sparklyr]: http://spark.rstudio.com/
+[RStudio Server]: https://www.rstudio.com/products/rstudio/
+[nickjer/singularity-r]: https://github.com/nickjer/singularity-r
+[nickjer/singularity-rstudio]: https://github.com/nickjer/singularity-rstudio
+[Standalone Mode]: https://spark.apache.org/docs/latest/spark-standalone.html
 [MIT License]: http://opensource.org/licenses/MIT
