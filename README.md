@@ -1,5 +1,8 @@
 # Singularity Apache Spark w/ RStudio Server
 
+[![Singularity Hub](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/455)
+[![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 Singularity image for [Apache Spark] with the [sparklyr] package installed. It
 was built on top of the base Singularity image [nickjer/singularity-rstudio] in
 order to launch an [RStudio Server] to more easily connect with an Apache Spark
