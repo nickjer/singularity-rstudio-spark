@@ -45,7 +45,7 @@ From: nickjer/singularity-rstudio
   Rscript -e " \
     withCallingHandlers( \
       install.packages( \
-        c('ggplot2','sparklyr'), \
+        c('tidyverse','sparklyr'), \
         repo = 'https://cran.rstudio.com/', \
         clean = TRUE \
       ), \
