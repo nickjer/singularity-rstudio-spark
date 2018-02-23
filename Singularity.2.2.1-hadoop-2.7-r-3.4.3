@@ -46,6 +46,7 @@ From: nickjer/singularity-rstudio:3.4.3
     withCallingHandlers( \
       install.packages( \
         c('tidyverse','sparklyr'), \
+        lib='/usr/local/lib/R/site-library', \
         repo = 'https://cran.rstudio.com/', \
         clean = TRUE \
       ), \
